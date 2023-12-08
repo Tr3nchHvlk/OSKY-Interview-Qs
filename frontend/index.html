@@ -91,7 +91,7 @@
         transform: translate(-50%, 0%);
         top: 90%;
         left: 50%;
-        visibility: visible;
+        visibility: hidden;
     }
     .dropdown_menu_box {
         position: absolute;
@@ -100,9 +100,9 @@
         left: 100%;
         width: 800px;
         height: 100%;
-        visibility: visible;
+        visibility: hidden;
     }
-    .dropdown_menu_content {
+    .dropdown-menu-content {
         position: absolute;
         font-size: medium;
         background-color: white;
@@ -116,6 +116,7 @@
         padding-left: 30px;
         padding-right: 30px;
         padding-bottom: 35px;
+        visibility: hidden;
     }
     .dropdown-menu-block {
         position: relative;
@@ -140,8 +141,8 @@
         left: 50%;
         background-size: cover;
         width: 100vw;
-        height: 100vw;
-        visibility: hidden;
+        height: 100vh;
+        visibility: visible;
     }
     .screenspace-dialog-bg {
         position: absolute;
@@ -162,7 +163,7 @@
         background-color: white;
         background-size: cover;
         width: 27%;
-        height: 21%;
+        height: 35%;
         text-align: center;
         border-radius: 10px;
     }
@@ -259,7 +260,7 @@
             <li class="nav-li-bottom" drop_lock=false>
                 <a class="nav-link-main" href="#">News</a>
             </li>
-            <li class="nav-li-bottom" drop_lock=false>
+            <li class="nav-li-bottom" drop_lock=false target="Membership">
                 <a class="nav-link-main" href="#">Membership</a>
             </li>
             <li class="nav-li-bottom" drop_lock=false>
@@ -277,7 +278,7 @@
         </ul>
         <div class="dropdown_menu_bg"></div>
         <div class="dropdown_menu_box">
-            <div class="dropdown_menu_content">
+            <div class="dropdown-menu-content"  target="Membership">
                 <div class="dropdown-menu-block">
                     <a href="#">Latest News</a>
                 </div>
