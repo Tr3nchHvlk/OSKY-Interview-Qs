@@ -134,7 +134,7 @@
         text-decoration: none;
         color: black;
     }
-    .screenspace-dialog {
+    #screenspace-dialog {
         position: fixed;
         transform: translate(-50%, -50%);
         top: 50%;
@@ -142,9 +142,9 @@
         background-size: cover;
         width: 100vw;
         height: 100vh;
-        visibility: visible;
+        visibility: hidden;
     }
-    .screenspace-dialog-bg {
+    #screenspace-dialog-bg {
         position: absolute;
         transform: translate(-50%, -50%);
         top: 50%;
@@ -155,7 +155,7 @@
         width: 100%;
         height: 100%;
     }
-    .screenspace-dialog-box {
+    #screenspace-dialog-box {
         position: absolute;
         transform: translate(-50%, -50%);
         top: 49%;
@@ -167,7 +167,7 @@
         text-align: center;
         border-radius: 10px;
     }
-    .screenspace-dialog-prompt {
+    #screenspace-dialog-prompt {
         font-size: x-large;
         position: absolute;
         transform: translate(-50%, 0%);
@@ -176,7 +176,7 @@
         /* border: 1px solid black; */
         width: 95%;
     }
-    .screenspace-dialog-cancel {
+    #screenspace-dialog-cancel {
         font-size: large;
         position: absolute;
         transform: translate(0%, -100%);
@@ -192,7 +192,7 @@
         padding-top: 3%;
         padding-bottom: 3%;
     }
-    .screenspace-dialog-proceed {
+    #screenspace-dialog-proceed {
         font-size: large;
         position: absolute;
         transform: translate(-100%, -100%);
@@ -247,7 +247,7 @@
                 <a class="fa fa-linkedin nav-link-top" href="#"></a>
             </li>
             <li class="nav-li-top">
-                <a class="fa fa-twitter nav-link-top" href="#"></a>
+                <a class="fa fa-twitter nav-link-top" href="https://twitter.com/elonmusk"></a>
             </li>
             <li class="nav-li-top">
                 <a class="fa fa-youtube nav-link-top" href="#"></a>
@@ -294,16 +294,16 @@
             </div>
         </div>
     </nav>
-    <div class="screenspace-dialog">
-        <div class="screenspace-dialog-bg">
+    <div id="screenspace-dialog">
+        <div id="screenspace-dialog-bg">
 
         </div>
-        <div class="screenspace-dialog-box">
-            <p class="screenspace-dialog-prompt">
-                You will be redirected to the following externel link: <br><br><span>Link</span>
+        <div id="screenspace-dialog-box">
+            <p id="screenspace-dialog-prompt">
+                You will be redirected to the following externel link:<br><br><span>Link</span>
             </p>
-            <a class="screenspace-dialog-cancel" href="#">Cancel</a>
-            <a class="screenspace-dialog-proceed" href="#">Proceed</a>
+            <a id="screenspace-dialog-cancel" href="#">Cancel</a>
+            <a id="screenspace-dialog-proceed" href="#">Proceed</a>
             <!-- <div class="screenspace-dialog-cancel">
                 <a href="#">Cancel</a>
             </div>
