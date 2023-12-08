@@ -131,10 +131,52 @@
         top: 49%;
         left: 50%;
         background-color: white;
-        /* opacity: 70%; */
         background-size: cover;
         width: 27%;
         height: 21%;
+        text-align: center;
+        font-size: large;
+        border-radius: 10px;
+    }
+    .screenspace-dialog-cancel {
+        position: absolute;
+        transform: translate(0%, -100%);
+        top: 96%;
+        left: 5%;
+        /* background-color: red; */
+        background-size: cover;
+        width: 35%;
+        height: 15%;
+        border: 1px solid black;
+        border-radius: 30px;
+    }
+    .screenspace-dialog-cancel > a {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        text-decoration: none;
+        color: black;
+    }
+    .screenspace-dialog-proceed {
+        position: absolute;
+        transform: translate(-100%, -100%);
+        top: 96%;
+        left: 95%;
+        background-color: #00AEEF;
+        background-size: cover;
+        width: 35%;
+        height: 15%;
+        border: 1px solid white;
+        border-radius: 30px;
+    }
+    .screenspace-dialog-proceed > a {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        text-decoration: none;
+        color: white;
     }
 </style>
 
@@ -197,7 +239,15 @@
 
         </div>
         <div class="screenspace-dialog-box">
-
+            <p>
+                You will be redirected to the following externel link: <span>Link</span>
+            </p>
+            <div class="screenspace-dialog-cancel">
+                <a href="#">Cancel</a>
+            </div>
+            <div class="screenspace-dialog-proceed">
+                <a href="#">Proceed</a>
+            </div>
         </div>
     </div>
 </body>
