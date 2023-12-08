@@ -135,30 +135,35 @@
         width: 27%;
         height: 21%;
         text-align: center;
-        font-size: large;
         border-radius: 10px;
     }
+    .screenspace-dialog-prompt {
+        font-size: x-large;
+        position: absolute;
+        transform: translate(-50%, 0%);
+        top: 5%;
+        left: 50%;
+        /* border: 1px solid black; */
+        width: 95%;
+    }
     .screenspace-dialog-cancel {
+        font-size: large;
         position: absolute;
         transform: translate(0%, -100%);
         top: 96%;
         left: 5%;
-        /* background-color: red; */
         background-size: cover;
         width: 35%;
-        height: 15%;
+        /* height: 15%; */
         border: 1px solid black;
         border-radius: 30px;
-    }
-    .screenspace-dialog-cancel > a {
-        position: absolute;
-        transform: translate(-50%, -50%);
-        top: 50%;
-        left: 50%;
         text-decoration: none;
         color: black;
+        padding-top: 3%;
+        padding-bottom: 3%;
     }
     .screenspace-dialog-proceed {
+        font-size: large;
         position: absolute;
         transform: translate(-100%, -100%);
         top: 96%;
@@ -166,9 +171,21 @@
         background-color: #00AEEF;
         background-size: cover;
         width: 35%;
-        height: 15%;
+        /* height: 15%; */
         border: 1px solid white;
         border-radius: 30px;
+        text-decoration: none;
+        color: white;
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+    /* .screenspace-dialog-cancel > a {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        text-decoration: none;
+        color: black;
     }
     .screenspace-dialog-proceed > a {
         position: absolute;
@@ -177,7 +194,7 @@
         left: 50%;
         text-decoration: none;
         color: white;
-    }
+    } */
 </style>
 
 <head>
@@ -239,15 +256,17 @@
 
         </div>
         <div class="screenspace-dialog-box">
-            <p>
-                You will be redirected to the following externel link: <span>Link</span>
+            <p class="screenspace-dialog-prompt">
+                You will be redirected to the following externel link: <br><br><span>Link</span>
             </p>
-            <div class="screenspace-dialog-cancel">
+            <a class="screenspace-dialog-cancel" href="#">Cancel</a>
+            <a class="screenspace-dialog-proceed" href="#">Proceed</a>
+            <!-- <div class="screenspace-dialog-cancel">
                 <a href="#">Cancel</a>
             </div>
             <div class="screenspace-dialog-proceed">
                 <a href="#">Proceed</a>
-            </div>
+            </div> -->
         </div>
     </div>
 </body>
