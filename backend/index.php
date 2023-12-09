@@ -6,17 +6,36 @@
 
     $json_decoded = json_decode($raw_bytes);
 
-    // var_dump($json_decoded[0]);
+    // sort json objects based on title alphabetically (insertion sort)
+    $json_sorted = [];
 
-    $as_html = sprintf("<p>%s</p>", $json_decoded[0]->pubDate);
+    foreach($json_decoded as $jdk => $jdv) {
+        if (sizeof($json_sorted) > 0) {
+            foreach($json_sorted as $jsk => $jsv) {
+                if ($jdv->title > $jsv->title) {
+                    // echo $jsv->title . " " . $jdv->title . "\n";
+                    if ($jsk == array_key_last($json_sorted)) {
+                        array_splice($json_sorted, $jsk + 1, 0, array($jdv));
+                    }
+                } else {
+                    array_splice($json_sorted, $jsk, 0, array($jdv));
+                    break;
+                }
+            }
+        } else {array_push($json_sorted, $jdv);}
+    }
 
-    $datetime_parsed = DateTime::createFromFormat("D, j M Y H:i:s T", $json_decoded[0]->pubDate);
+    var_dump($json_sorted);
 
-    echo $json_decoded[0]->description;
+    // sprintf("<p>%s</p>", $json_decoded[0]->pubDate);
 
-    echo "\n";
+    // $datetime_parsed = DateTime::createFromFormat("D, j M Y H:i:s T", $json_decoded[0]->pubDate);
 
-    echo $datetime_parsed->format("l, jS \of F Y g:i a");
+    // echo $json_decoded[0]->description;
+
+    // echo "\n";
+
+    // echo $datetime_parsed->format("l, jS \of F Y g:i a");
 
     fclose($file_opened);
 ?>
